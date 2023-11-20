@@ -3,6 +3,7 @@
 html {
   box-sizing: border-box;
   font-size: 16px;
+  background-color: white;
 }
 
 *, *:before, *:after {
@@ -22,3 +23,77 @@ body {
 
 /* STYLES */
 /* Write your CSS below */
+
+/* fix imagine position before turning in*/
+.header {
+  background-image: url(../images/apple-pie.jpg);
+  background-position: 0 0;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 630px;
+  position: relative;
+  color: white;
+  font-size: 3em;
+  margin-bottom: 40px;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.description {
+  text-align: justify;
+  padding: 10px 50px;
+  line-height: 1.4;
+}
+
+h2 {
+  font-weight: bold;
+  font-size: 1.3em;
+  margin: 30px 50px;
+  font-family: Helvetica;
+}
+
+.recipeInfo {
+  margin: auto;
+  width: 300px;
+  height: auto;
+  display: flex;
+  align-items: wrap;
+}
+
+hr {
+  margin: 20px 50px;
+}
+
+ul {
+   margin: 10px 50px;
+   list-style: none;
+   line-height: 1.4;
+}
+
+ul li::before {
+  content: "- ";
+}
+
+.cookingInfo {
+  margin: auto;
+  width: 300px;
+  height: auto;
+  display: flex;
+  align-items: wrap;
+}
+
+ol {
+  margin: 10px 50px;
+  counter-reset: list;
+  line-height: 1.4;
+  margin-bottom: 50px;
+}
+ol > li {
+  list-style: none;
+}
+ol > li:before {
+  content: counter(list, counter) ") ";
+  counter-increment: list;
+}
